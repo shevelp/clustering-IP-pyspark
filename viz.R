@@ -17,7 +17,7 @@ library(rgeos)
 # https://rspatial.org/raster/intr/index.html
 
 #read raster and renaming
-mypath1 <- '/Users/Sergi/Desktop/My folder/research/CC_IP/data/Present/'
+mypath1 <- '/'
 currentfiles<- list.files(mypath1, pattern = ".tif$", full.names = TRUE)
 
 wc30seg <- stack(currentfiles)
@@ -46,7 +46,7 @@ names(wc30seg)
 
 
 #shapefile 
-shape <- readOGR('/Users/Sergi/Desktop/My folder/research/CC_IP/data/countries_shp/countries.shp')
+shape <- readOGR('')
 class(shape)
 names(shape)
 
@@ -79,15 +79,15 @@ points <-rasterToPoints(IP_data) %>% as.data.frame()
 library(dplyr)
 
 #r1eading results
-hie <- read.csv("/Users/Sergi/Desktop/My folder/UPMthings/1ercuatri/ML/Bloque 3/Exercise/reults/predictions.csv")
-knn <- read.csv("/Users/Sergi/Desktop/My folder/UPMthings/1ercuatri/ML/Bloque 3/Exercise/reults/predictions_knn.csv")
-gmm <- read.csv("/Users/Sergi/Desktop/My folder/UPMthings/1ercuatri/ML/Bloque 3/Exercise/reults/predictions_gmm.csv")
+hie <- read.csv("")
+knn <- read.csv("")
+gmm <- read.csv("")
 
 colnames(knn)[4] <- "predictionKnn"
 colnames(gmm)[5] <- "predictionGmm"
 
 #reading original data
-IP_data_r <- read.csv("/Users/Sergi/Desktop/My folder/research/CC_IP/data/IP_data")
+IP_data_r <- read.csv("")
 
 #Joining dfs
 IP_data_labeledhie <- cbind(IP_data_r,hie)
